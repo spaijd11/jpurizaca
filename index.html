@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi Página Personal</title>
+    <meta name="description" content="Página personal de Jonathan Purizaca, desarrollador web y creador de contenido. Conecta conmigo en mis redes sociales.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -46,12 +47,12 @@ body {
 }
 
 .profile p {
-    font-size: 1.2em;
+    font-size: .9em;
     color: #666;
 }
 
 .social-links {
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .social-icon {
@@ -61,7 +62,7 @@ body {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background: #3498db;
+    background: #052153;
     border-radius: 50%;
     display: inline-block;
     transition: all 0.3s ease;
@@ -69,8 +70,7 @@ body {
 }
 
 .social-icon:hover {
-    background: #2980b9;
-    transform: translateY(-5px);
+    animation: bounce 0.6s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -102,21 +102,87 @@ body {
     }
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #072866;
+    background-size: cover;
+    z-index: -1;
+}
+
+
     </style>
 </head>
 <body>
+    <div class="circle"></div>
+    <div class="dot"></div>
     <div class="container">
         <div class="profile">
             <img src="https://media.licdn.com/dms/image/v2/D4E35AQHKHrYJu-aMWg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1706384727505?e=1726344000&v=beta&t=kCTOW5XBw9Jn6IYslXbD-3HRBcSI9LHhy0lTVGwKS_0" alt="Mi Foto">
             <h1>Ing. CIP. Jonathan Purizaca</h1>
-            <p>Desarrollador Web | Creador de Contenido | Emprendedor</p>
+            <p>Ingeniero de Sistemas | Desarrollador Full Stack | Creador de Contenido | Capacitador y Docente | Emprendedor</p>
         </div>
         <div class="social-links">
-            <a href="https://facebook.com/jpurizacap" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/spaijd11" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/jpurizacap/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/jpurizacap" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/spaijd11" class="social-icon" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://facebook.com/jpurizacap" class="social-icon" target="_blank" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/spaijd11" class="social-icon" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/jpurizacap/" class="social-icon" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/jpurizacap" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <div id="particles-js"></div>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            }
+        });
+    </script>
+    
 </body>
 </html>
