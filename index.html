@@ -9,98 +9,132 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-}
-
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    animation: zoomIn 1s ease-in-out;
-}
-
-.profile h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-}
-
-.profile p {
-    font-size: 1.2em;
-    color: #666;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-icon {
-    margin: 0 10px;
-    font-size: 1.5em;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    background: #3498db;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all 0.3s ease;
-    animation: bounce 1.5s infinite ease-in-out;
-}
-
-.social-icon:hover {
-    background: #2980b9;
-    transform: translateY(-5px);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.5);
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    to {
-        transform: scale(1);
-    }
-}
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+    .container {
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in-out;
+        max-width: 90%;
     }
-    50% {
-        transform: translateY(-10px);
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        animation: zoomIn 1s ease-in-out;
     }
-}
+
+    .profile h1 {
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+
+    .profile p {
+        font-size: 1.2em;
+        color: #666;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        margin: 0 10px;
+        font-size: 1.5em;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background: #3498db;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.3s ease;
+        animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    .social-icon:hover {
+        background: #2980b9;
+        transform: translateY(-5px);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.5);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    /* Media Query for mobile devices */
+    @media (max-width: 768px) {
+        body {
+            height: auto;
+            padding: 20px;
+        }
+
+        .container {
+            padding: 15px;
+            max-width: 100%;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .profile h1 {
+            font-size: 1.5em;
+        }
+
+        .profile p {
+            font-size: 1em;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 1.2em;
+        }
+    }
 
     </style>
 </head>
